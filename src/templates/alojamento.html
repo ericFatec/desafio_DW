@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}<title>Alojamento</title>{% endblock %}
+
+{% block content %}
+<section>
+	<div class="container py-4">
+		<h1 class="h1 text-center text-white" id="pageHeaderTitle">Alojamentos</h1>
+
+		<article class="postcard dark blue" id="clinica">
+			<img class="postcard__img" src="../static/imgs/iosefkas.jpg" alt="Image Title" />
+			<div class="postcard__text">
+				<h1 class="postcard__title">Clínica de Iosefka</h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+                    Localizada na misteriosa cidade de Yharnam, a Clínica de Iosefka se apresenta como um refúgio
+                    seguro para os viajantes cansados em busca de proteção contra os horrores que assolam a cidade.
+                    Com sua fachada convidativa e atmosfera tranquila, a clínica parece um oásis de calma em meio ao caos.
+                </div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item">
+						<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#agendaModal">Agendar Visita</button>
+					</li>
+				</ul>
+			</div>
+		</article>
+		<article class="postcard dark blue" id="abrigo">
+			<img class="postcard__img" src="../static/imgs/abrigo.jpg" alt="Image Title" />
+			<div class="postcard__text">
+				<h1 class="postcard__title blue">Abrigo do Caçador</h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+                    Escondido nas profundezas das catacumbas de Yharnam, o Abrigo do Caçador é um local discreto
+                    onde os caçadores podem descansar e se preparar para suas próximas caçadas. Com suas lareiras crepitantes e suprimentos abundantes,
+                    é o lugar perfeito para reabastecer antes de enfrentar os perigos das ruas.
+                </div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item">
+						<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#agendaModal">Agendar Visita</button>
+					</li>
+				</ul>
+			</div>
+		</article>
+        <article class="postcard dark blue" id="santuario">
+			<img class="postcard__img" src="../static/imgs/catedral.jpg" alt="Image Title" />
+			<div class="postcard__text">
+				<h1 class="postcard__title blue">Santuário da Oração</h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+                    Escondido nos recantos mais remotos de Yharnam, o Santuário da Oração é um lugar de paz e serenidade, onde os peregrinos podem se reunir para
+                    meditar e buscar consolo espiritual. Com sua arquitetura antiga e vistas deslumbrantes da cidade, é um local verdadeiramente inspirador.
+                </div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item">
+						<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#agendaModal">Agendar Visita</button>
+					</li>
+				</ul>
+			</div>
+		</article>
+	</div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade bg-dark" id="agendaModal" tabindex="-1" aria-labelledby="agendaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agendaModalLabel">Informações para Agendamento</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+                <form>
+                    <div data-mdb-input-init class="form-outline mb-2">
+                      <label class="form-label" for="nome">Nome</label>
+                      <input type="text" id="nome" class="form-control"/>
+                    </div>
+
+					          <div data-mdb-input-init class="form-outline mb-2">
+                      <label class="form-label" for="sobrenome">Sobrenome</label>
+                      <input type="text" id="sobrenome" class="form-control" />
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-2">
+                      <label class="form-label" for="email">Email</label>
+                      <input type="email" id="email" class="form-control" />
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-2">
+                      <label class="form-label" for="password2">Telefone</label>
+                      <input type="tel" id="telefone" class="form-control" />
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-2">
+                      <label class="form-label" for="password2">Data</label>
+                      <input type="date" id="telefone" class="form-control" />
+                    </div>
+                </form>
+            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Modal -->
+{% endblock %}
