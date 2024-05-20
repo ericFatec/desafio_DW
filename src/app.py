@@ -1,5 +1,5 @@
 from connect_db import connect
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Column, String, Integer, Date, select
 from sqlalchemy.ext.declarative import declarative_base
