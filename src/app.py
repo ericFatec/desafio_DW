@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Column, String, Integer, Date, select
 from sqlalchemy.ext.declarative import declarative_base
 
-app = Flask("__name__")
+app = Flask("__name__", static_url_path='/static')
 
 Base = declarative_base()
 
@@ -85,6 +85,11 @@ def send_db():
         session.close()
 
         return jsonify({'message': 'Dados enviados com sucesso!'})
+
+# Serve static files
+@app.route('/static/<path:filename>')
+def staticfiles(filename):
+    return send_from_directory('static', filename)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
