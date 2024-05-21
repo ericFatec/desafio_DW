@@ -1,15 +1,11 @@
 from connect_db import connect
-from flask import Flask, render_template, request, jsonify, send_from_directory
+from flask import Flask, render_template, request, jsonify
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Column, String, Integer, Date, select
 from sqlalchemy.ext.declarative import declarative_base
 from werkzeug.middleware.proxy_fix import ProxyFix
 
-app = Flask("__name__", static_url_path='/static')
-
-app.wsgi_app = ProxyFix(
-    app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
-)
+app = Flask("__name__")
 
 Base = declarative_base()
 
@@ -90,11 +86,6 @@ def send_db():
         session.close()
 
         return jsonify({'message': 'Dados enviados com sucesso!'})
-
-# Serve static files
-@app.route('/static/<path:filename>')
-def staticfiles(filename):
-    return send_from_directory('static', filename)
 
 if __name__ == "__main__":
     app.run()
