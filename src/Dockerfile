@@ -9,4 +9,5 @@ COPY . .
 
 EXPOSE 5000/tcp
 
-CMD [ "python3", "-m", "flask", "run", "--host=0.0.0.0" ]
+# Run the application with Gunicorn
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]
