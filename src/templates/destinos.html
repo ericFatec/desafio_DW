@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+<!-- {% block title %}<title>Destinos</title>{% endblock %} -->
+
+{% block content %}
+<section>
+	<div class="container py-4">
+		<h1 class="h1 text-center text-white" id="pageHeaderTitle">Destinos Atrativos</h1>
+
+		<article class="postcard dark blue">
+			<img class="postcard__img" src="../static/imgs/central.jpg" alt="Image Title" />
+			<div class="postcard__text">
+				<h1 class="postcard__title blue">Praça Central de Yharnam</h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+                    O coração pulsante da cidade, a Praça Central de Yharnam é um local vibrante onde os habitantes se reúnem para negócios e lazer.
+                    Com suas praças movimentadas, mercados pitorescos e arquitetura deslumbrante, é o ponto de partida perfeito para sua jornada em Yharnam.
+                </div>
+			</div>
+		</article>
+		<article class="postcard dark blue" id="abrigo">
+			<img class="postcard__img" src="../static/imgs/jardim.jpg" alt="Image Title" />
+			<div class="postcard__text">
+				<h1 class="postcard__title blue">Jardim Esquecido</h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+                    Escondido nas sombras da cidade, o Jardim Esquecido é um oásis de tranquilidade em meio ao caos de Yharnam.
+                    Com seus aromas serenos e flores exóticas, é o lugar perfeito para uma pausa relaxante longe dos perigos das ruas.
+                </div>
+			</div>
+		</article>
+        <article class="postcard dark blue" id="santuario">
+			<img class="postcard__img" src="../static/imgs/cainhurst.jpg" alt="Image Title" />
+			<div class="postcard__text">
+				<h1 class="postcard__title blue">Mansão Cainhurst</h1>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">
+                    Erguendo-se majestosamente em uma colina distante, a Mansão Cainhurst é um símbolo de opulência e mistério.
+                    Com sua arquitetura gótica e jardins exuberantes, é um destino fascinante para os viajantes que desejam desvendar os segredos da nobreza de Yharnam.
+                </div>
+			</div>
+		</article>
+	</div>
+</section>
+{% endblock %}

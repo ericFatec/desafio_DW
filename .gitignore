@@ -1,0 +1,6 @@
+# Byte-compiled / optimized / DLL files
+src/__pycache__/
+
+# Environments
+src/venv/
+
